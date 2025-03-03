@@ -262,12 +262,32 @@ body {
 }
 
 #information-box {
+    position: relative;
     padding: 20px;
-    background-color: rgb(22, 22, 22);
+    background-color: rgba(22, 22, 22, 0.5);
     border: 1px dashed rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     box-shadow: rgba(255, 255, 255, 0.04) 0px 0.602187px 2.04744px -0.833333px inset, rgba(255, 255, 255, 0.04) 0px 2.28853px 7.78101px -1.66667px inset, rgba(255, 255, 255, 0.04) 0px 10px 34px -2.5px inset;
+    overflow: hidden;
 }
+
+/* Pseudo-element for pattern overlay with opacity */
+#information-box::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("https://framerusercontent.com/images/27lPwr6m0qWCWuTd76MieCfLWY.svg");
+    background-repeat: repeat;
+    background-size: 50.4px; /* Matches Framer */
+    background-position: left top;
+    
+    /* Subtle pattern effect */
+    opacity: 0.02; /* Makes pattern barely visible */
+    filter: invert(1);
+    
+    pointer-events: none;
+}
+
 
 #current-date {
     font-size: 17px;
@@ -280,7 +300,6 @@ body {
 }
 
 #btn-download-cv {
-    width: 100%;
     display: block;
     background-color: rgb(25, 25, 25);
     border: 1px dashed rgba(255, 255, 255, 0.12);
@@ -309,7 +328,7 @@ body {
         mask-image: url("assets/img/download-simple-duotone-svgrepo-com.svg");
         opacity: 0.8;
         transition: all 0.3s ease-in-out;
-    } 
+    }
 }
 
 #btn-download-cv:hover {
@@ -367,6 +386,13 @@ body {
     min-width: 300px;
     max-width: 90%;
 }
+
+#cv-modal-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
 
 /* Download Buttons */
 .cv-btn {
