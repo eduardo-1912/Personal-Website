@@ -135,49 +135,97 @@
     <main class="main">
         <section id="home">
             <div class="container-home">
+                <div class="stars-bg"></div>
 
                 <div class="d-flex justify-content-between" style="margin-bottom: 32px;">
-                    <p class="mono-text" data-en="WHO AM I?" data-pt="QUEM SOU EU?"></p>
-                    <p class="mono-text" data-en="MY SKILLS" data-pt="HABILIDADES"></p>
+                    <p class="mono-text" data-en="WHO-AM-I" data-pt="QUEM-SOU-EU"></p>
+                    <a href="#" class="text-white"><p class="mono-text" data-en="MY-SKILLS" data-pt="HABILIDADES"></p><span></span></a>
                 </div>
 
                 <h1 style="font-weight: 800; font-size: 32px; margin-bottom: 20px;">Hello, I'm Eduardo</h1>
 
                 <div>
-                    <p class="about-text mb-3">Hey, I’m Eduardo, a product and graphic designer with a knack for creating meaningful, user-friendly designs. Right now, I’m leading design at NexusLab, where we’re redefining digital interactions.</p>
+                    <p class="about-text mb-3">Replace this text product and graphic designer with a knack for creating meaningful, user-friendly designs. Right now, I’m leading design at NexusLab, where we’re redefining digital interactions.</p>
                     <p class="about-text mb-3">Before NexusLab, I spent a few years at BrightPath, crafting intuitive designs for cutting-edge apps. I’ve also worked with Flux Studios, PixelForge, and Orbital Designs, focusing on branding and UX.</p>
-                    <a id="contact-btn" class="my-2" href="#contact"><span></span><p class="fs-15" data-en="Contact" data-pt="Contactar"></p></a>
+                    <a id="contact-btn" class="my-3" href="#contact"><span></span><p class="fs-15" data-en="Contact me" data-pt="Contactar"></p></a>
                 </div>
 
+                <div class="job-experience">
+                    <div class="job-item">
+                        <div class="job-header" data-bs-toggle="collapse" data-bs-target="#job1" aria-expande="false">
+                            <div class="job-left">
+                                <img src="assets/img/work1.svg" alt="Flux Studios">
+                                <span>Flux Studios</span>
+                            </div>
+                            <div class="job-divider"></div>
+                            <div class="job-right">
+                                <span>IT Helpdesk</span>
+                                <span>02/2025 - 07/2025</span>
+                                <span id="collapse-arrow"></span>
+                            </div>
+                        </div>
+                        <div id="job1" class="collapse job-description">
+                            <ul>
+                                <li data-en="Designed and led multiple high-profile projects." data-pt="Designed and led multiple high-profile projects."></li>
+                                <li>Managed a team of UI/UX designers.</li>
+                                <li>Collaborated with developers to improve workflows.</li>
+                            </ul>
+                        </div>
+                    </div>
+                
+                    <div class="job-item">
+                        <div class="job-header" data-bs-toggle="collapse" data-bs-target="#job2">
+                            <div class="job-left">
+                                <img src="assets/img/work2.svg" alt="NexusLab">
+                                <span>NexusLab</span>
+                            </div>
+                            <div class="job-divider"></div>
+                            <div class="job-right">
+                                <span>IT Security Intern</span>
+                                <span>06/2024 - 09/2024</span>
+                                <span id="collapse-arrow"></span>
+                            </div>
+                        </div>
+                        <div id="job2" class="collapse job-description">
+                            <ul>
+                                <li>Worked remotely on branding and UI/UX projects.</li>
+                                <li>Designed marketing materials and interactive websites.</li>
+                                <li>Collaborated with startups and large corporations.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+
+
+            </div>
+        </section>
+
+        <section id="certificates">
+            <div class="container-certificates">
+                <img src="assets/img/placeholder.jpg" width="33%">
+                <img src="assets/img/placeholder.jpg" width="33%">
+                <img src="assets/img/placeholder.jpg" width="33%">
             </div>
         </section>
 
 
 
 
-        <!-- <div class="container">
-            <section id="certificates">
-                certificates
-                <img src="assets/img/placeholder.jpg" width="50%">
-                <img src="assets/img/placeholder.jpg" width="50%">
-                <img src="assets/img/placeholder.jpg" width="50%">
-                <img src="assets/img/placeholder.jpg" width="50%">
-            </section>
+        <div class="container">
             <section id="projects">
-                projects
                 <img src="assets/img/placeholder.jpg" width="50%">
                 <img src="assets/img/placeholder.jpg" width="50%">
                 <img src="assets/img/placeholder.jpg" width="50%">
                 <img src="assets/img/placeholder.jpg" width="50%">
             </section>
             <section id="contact">
-                contact
                 <img src="assets/img/placeholder.jpg" width="50%">
                 <img src="assets/img/placeholder.jpg" width="50%">
                 <img src="assets/img/placeholder.jpg" width="50%">
                 <img src="assets/img/placeholder.jpg" width="50%">
             </section>
-        </div> -->
+        </div>
 
 
 
@@ -185,8 +233,7 @@
     
 
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
     <!-- Bootstrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
