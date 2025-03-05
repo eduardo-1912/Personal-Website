@@ -63,6 +63,22 @@ body {
     font-size: 20px;
 }
 
+.mono {
+    font-family: 'DM Mono', monospace;
+}
+
+.opacity-70 {
+    opacity: 0.7;
+}
+
+.opacity-80 {
+    opacity: 0.8;
+}
+
+.opacity-90 {
+    opacity: 0.9;
+}
+
 /*#region SIDEBAR */
 .sidebar {
     display: flex;
@@ -567,7 +583,6 @@ body {
 
 
 #btn-download-cv {
-    display: block;
     background-color: rgb(25, 25, 25);
     border: 1px dashed rgba(255, 255, 255, 0.12);
     border-radius: 10px;
@@ -732,6 +747,23 @@ body {
     z-index: 1; /* Ensure content stays above */
 }
 
+@media (max-width: 767px) {
+    .container-home {
+        padding: 36px 16px;
+        border-inline: 1px dashed transparent;
+    }
+
+    .experience-right {
+        > span:nth-child(1) {
+            display: none;
+        }
+
+        > span:nth-child(2) {
+            display: none;
+        }
+    }
+}
+
 .stars-bg {
     position: absolute; /* Position it behind content */
     top: 0;
@@ -744,6 +776,52 @@ body {
     background-image: url("assets/img/download.svg");
     opacity: 0.2;
     overflow: hidden;
+}
+
+#skills-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.7);
+    transform: translateY(-3px);
+    > span {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        background-size: 100% 100%;
+        object-fit: scale-down;
+        background-color: rgb(255, 255, 255);
+        -webkit-mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        -webkit-mask-image: url("assets/img/check-square-duotone-svgrepo-com.svg");
+        mask-image: url("assets/img/check-square-duotone-svgrepo-com.svg");
+        margin-left: 6px;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+#skills-btn:hover {
+    opacity: 0.9;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+}
+
+#skills-btn:active {
+    opacity: 1;
+}
+
+#home-title {
+    font-weight: 900;
+    font-size: 40px;
+    margin-bottom: 20px;
+    background: rgb(255,255,255);
+    background: linear-gradient(-145deg, rgba(255,255,255,1) 20%, rgb(217, 217, 217) 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
 }
 
 
@@ -809,13 +887,13 @@ body {
 }
 
 
-.job-experience {
+.experience {
     display: flex;
     flex-direction: column;
     gap: 2px;
 }
 
-.job-header {
+.experience-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -825,11 +903,9 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-.job-header:hover {
-    
-}
 
-.job-left {
+
+.experience-left {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -837,13 +913,13 @@ body {
     white-space: nowrap; /* Prevents text from wrapping */
 }
 
-.job-left img {
-    width: 26px;
-    height: 26px;
+.experience-left img {
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
 }
 
-.job-right {
+.experience-right {
     display: flex;
     align-items: center;
     align-content: center;
@@ -865,13 +941,13 @@ body {
 
 }
 
-.job-divider {
+.experience-divider {
     flex-grow: 1;
     border: 0.05rem dashed rgba(255, 255, 255, 0.12);
     margin: 0 16px; /* Ensures spacing between elements */
 }
 
-.job-description ul {
+.experience-description ul {
     padding-left: 36px;
     padding-block: 2px 12px;
     margin: 0;
@@ -881,7 +957,7 @@ body {
 
 
 
-.job-description ul li {
+.experience-description ul li {
     margin-bottom: 5px;
     font-size: 15px;
 }
@@ -903,16 +979,11 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-.job-item .collapse.show + .job-header .job-right #collapse-arrow,
-.job-header[aria-expanded="true"] #collapse-arrow {
+.experience-item .collapse.show + .experience-header .experience-right #collapse-arrow,
+.experience-header[aria-expanded="true"] #collapse-arrow {
     transform: rotate(-180deg);
     opacity: 1;
 }
-
-
-
-
-
 
 
 .container-certificates {
@@ -920,3 +991,4 @@ body {
     padding: 100px 56px;
     border-block: 1px solid rgba(255, 255, 255, 0.1);
 }
+
