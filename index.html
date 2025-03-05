@@ -24,40 +24,49 @@
 </head>
 <body>
 
-    <!-- Nav -->
+    <!--#region SIDEBAR (width >= 992px) -->
     <nav class="sidebar">
-        <div class="sidebar-header d-flex align-items-center">
+        <div class="header d-flex align-items-center">
             <div id="pfp" class="noselect">
                 <img src="assets/img/cat.jpg" alt="Profile Picture" width="100%" height="100%"> <!-- Placeholder -->
             </div>
             <div>
                 <p id="name" class="noselect">Eduardo<span style="padding-right: 5px;"></span>Carvalho</p>
-                <p id="sub-text" class="noselect">IT & Cybersecurity</p>
+                <p id="sub-text" class="noselect" data-en="IT & Cybersecurity" data-pt="IT & Cibersegurança"></p>
             </div>
         </div>
         <div class="d-flex flex-column" style="gap: 40px;">
             <div>
                 <ul class="navbar-nav nav-items">
-                    <li class="nav-item"><a id="nav-link-home" class="nav-link" href="#home"><span></span>Home</a></li>
-                    <li class="nav-item"><a id="nav-link-certificates" class="nav-link" href="#certificates"><span></span>Certificates</a></li>
-                    <li class="nav-item"><a id="nav-link-projects" class="nav-link" href="#projects"><span></span>Projects</a></li>
-                    <li class="nav-item"><a id="nav-link-contact" class="nav-link" href="#contact"><span></span>Contact</a></li>
+                    <li class="nav-item"><a id="nav-link-home" class="nav-link" href="#home"><span></span><p data-en="Home" data-pt="Ínicio"></p></a></li>
+                    <li class="nav-item"><a id="nav-link-certificates" class="nav-link" href="#certificates"><span></span><p data-en="Certificates" data-pt="Certificados"></p></a></li>
+                    <li class="nav-item"><a id="nav-link-projects" class="nav-link" href="#projects"><span></span><p data-en="Projects" data-pt="Projetos"></p></a></li>
+                    <li class="nav-item"><a id="nav-link-contact" class="nav-link" href="#contact"><span></span><p data-en="Contact" data-pt="Contactar"></p></a></li>
                 </ul>
             </div>
 
-            <div>
-                <p id="sidebar-social-media-title">LINKS -.-.</p>
+            <div id="sidebar-links">
+                <p id="sidebar-title">LINKS -.-.</p>
                 <div>
                     <ul class="navbar-nav nav-items">
                         <li class="nav-item"><a id="social-link-linkedin" class="social-link" href="https://linkedin.com/in/eduardo-dcs" target="_blank"><span></span>LinkedIn<span class="external-link-icon"></span></a></li>
                         <li class="nav-item"><a id="social-link-github" class="social-link" href="https://github.com/eduardo-dcs" target="_blank"><span></span>GitHub<span class="external-link-icon"></span></a></li>
                         <li class="nav-item"><a id="social-link-youtube" class="social-link" href="https://www.youtube.com/@eduardo-dcs" target="_blank"><span></span>YouTube<span class="external-link-icon"></span></a></li>
-                
                     </ul>
                 </div>
             </div>
 
             <div id="sidebar-bottom">
+                <div class="radio-inputs"> 
+                    <label class="radio">
+                        <input type="radio" name="radio" value="en" checked>
+                        <span class="name">English</span>
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="radio" value="pt">
+                        <span class="name">Português</span>
+                    </label>
+                </div>
                 <div id="information-box">
                     <p id="current-date"></p>
                     <p id="location">Leiria, Portugal</p>
@@ -68,29 +77,85 @@
             </div>
         </div>
     </nav>
+    <!--#endregion -->
 
-<!-- Hidden Modal -->
-<div id="cv-modal" class="cv-modal">
-    <div class="cv-modal-content">
-        <p id="sidebar-social-media-title">-. DOWNLOAD CV -.</p>
-        <h5 id="cv-modal-title">Select the Language</h5>
-        <button id="btn-download-cv" class="cv-btn"><span></span>English</button>        
-        <button id="btn-download-cv" class="cv-btn"><span></span>Portuguese</button>
-        <button id="btn-close-modal" class="close-btn">×</button>
-    </div>
-</div>
-    
+    <!--#region NAVBAR (width < 992px) -->
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark d-lg-none">
+
+        <!-- HEADER -->
+        <div class="header d-flex align-items-center">
+            <div id="pfp" class="noselect">
+                <img src="assets/img/cat.jpg" alt="Profile Picture" width="100%" height="100%"> <!-- Placeholder -->
+            </div>
+            <div>
+                <p id="name" class="noselect">Eduardo<span style="padding-right: 5px;"></span>Carvalho</p>
+                <p id="sub-text" class="noselect" data-en="IT & Cybersecurity" data-pt="IT & Cibersegurança"></p>
+            </div>
+        </div>
+
+        <!-- Navbar Toggler -->
+        <button class="custom-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bars"></span>
+            <span class="icon-x"></span>
+        </button>
+
+
+
+
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="my-4">
+                    <ul class="navbar-nav nav-items">
+                        <li class="nav-item"><a id="nav-link-home" class="nav-link" href="#home"><span></span><p data-en="Home" data-pt="Ínicio"></p></a></li>
+                        <li class="nav-item"><a id="nav-link-certificates" class="nav-link" href="#certificates"><span></span><p data-en="Certificates" data-pt="Certificados"></p></a></li>
+                        <li class="nav-item"><a id="nav-link-projects" class="nav-link" href="#projects"><span></span><p data-en="Projects" data-pt="Projetos"></p></a></li>
+                        <li class="nav-item"><a id="nav-link-contact" class="nav-link" href="#contact"><span></span><p data-en="Contact" data-pt="Contactar"></p></a></li>
+                    </ul>
+                </div>
+                
+                <div class="radio-inputs" style="margin-bottom: 18px;"> 
+                    <label class="radio">
+                        <input type="radio" name="radio" value="en" checked>
+                        <span class="name">English</span>
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="radio" value="pt">
+                        <span class="name">Português</span>
+                    </label>
+                </div>
+
+                <button id="btn-download-cv" class="btn w-100 mb-3"><span></span>Download CV</button>
+
+            </div>
+
+    </nav>
+    <!--#endregion -->
+
     
     <!-- Main Content -->
     <main class="main">
-        <div class="container">
-            <section id="home">
-                <img src="assets/img/placeholder.jpg" width="50%">
-                <img src="assets/img/placeholder.jpg" width="50%">
-                <img src="assets/img/placeholder.jpg" width="50%">
-                <img src="assets/img/placeholder.jpg" width="50%">
-                <img src="assets/img/placeholder.jpg" width="50%">
-            </section>
+        <section id="home">
+            <div class="container-home">
+
+                <div class="d-flex justify-content-between" style="margin-bottom: 32px;">
+                    <p class="mono-text" data-en="WHO AM I?" data-pt="QUEM SOU EU?"></p>
+                    <p class="mono-text" data-en="MY SKILLS" data-pt="HABILIDADES"></p>
+                </div>
+
+                <h1 style="font-weight: 800; font-size: 32px; margin-bottom: 20px;">Hello, I'm Eduardo</h1>
+
+                <div>
+                    <p class="about-text mb-3">Hey, I’m Eduardo, a product and graphic designer with a knack for creating meaningful, user-friendly designs. Right now, I’m leading design at NexusLab, where we’re redefining digital interactions.</p>
+                    <p class="about-text mb-3">Before NexusLab, I spent a few years at BrightPath, crafting intuitive designs for cutting-edge apps. I’ve also worked with Flux Studios, PixelForge, and Orbital Designs, focusing on branding and UX.</p>
+                    <a id="contact-btn" href="#contact"><span></span><p class="fs-16" data-en="Contact" data-pt="Contactar"></p></a>
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+        <!-- <div class="container">
             <section id="certificates">
                 certificates
                 <img src="assets/img/placeholder.jpg" width="50%">
@@ -112,7 +177,10 @@
                 <img src="assets/img/placeholder.jpg" width="50%">
                 <img src="assets/img/placeholder.jpg" width="50%">
             </section>
-        </div>
+        </div> -->
+
+
+
     </main>
     
 
@@ -121,7 +189,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- Bootstrap JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 
     <!-- JavaScript -->
     <script src="script.js"></script>
