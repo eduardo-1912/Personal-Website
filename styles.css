@@ -85,6 +85,7 @@ body {
     flex-direction: column;
     position: fixed;
     overflow: hidden;
+    z-index: 10;
     top: 0;
     left: 0;
     width: 260px;
@@ -747,7 +748,7 @@ body {
     z-index: 1; /* Ensure content stays above */
 }
 
-@media (max-width: 767px) {
+@media (max-width: 420px) {
     .container-home {
         padding: 36px 16px;
         border-inline: 1px dashed transparent;
@@ -764,12 +765,25 @@ body {
     }
 }
 
+@media (max-width: 1040px) {
+    .container-home {
+        padding: 36px 24px;
+        border-inline: 1px dashed transparent;
+    }
+
+    .experience-right {
+        > span:nth-child(1) {
+            display: none;
+        }
+    }
+}
+
 .stars-bg {
     position: absolute; /* Position it behind content */
     top: 0;
     left: 0;
     width: 100%;
-    height: 380px; /* Cover the entire section */
+    height: 420px; /* Cover the entire section */
     z-index: -1; /* Send it behind the text */
     image-rendering: pixelated;
     background-size: cover;
@@ -898,19 +912,61 @@ body {
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    padding: 12px 10px;
-    border-radius: 8px;
+    padding: 12px 8px;
     transition: all 0.3s ease-in-out;
 }
 
+.experience-header:hover {
+    #collapse-arrow {
+        opacity: 1;
+    }
 
+    .experience-left {
+
+        > span {
+            color: rgba(255, 255, 255, 1);
+
+        }
+
+        > img {
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
+        }
+    }
+
+    .experience-divider {
+        border: 0.05rem dashed rgba(255, 255, 255, 0.25);
+    }
+
+    .experience-right {
+        > span:nth-child(1) {
+            color: rgba(255, 255, 255, 1);
+
+        }
+
+        > span:nth-child(2) {
+            color: rgba(255, 255, 255, 0.7);
+
+        }
+    }
+
+}
 
 .experience-left {
     display: flex;
     align-items: center;
     gap: 10px;
     font-size: 15px;
-    white-space: nowrap; /* Prevents text from wrapping */
+    white-space: nowrap;
+    transition: all 0.3s ease-in-out;
+
+    > span {
+        transition: all 0.3s ease-in-out;
+    }
+
+    > img {
+        transition: all 0.3s ease-in-out;
+    }
+
 }
 
 .experience-left img {
@@ -926,15 +982,18 @@ body {
     gap: 12px;
     font-size: 15px;
     white-space: nowrap; /* Ensures text stays on one line */
+    transition: all 0.3s ease-in-out;
 
     > span:nth-child(1) {
         color: rgba(255, 255, 255, 0.8);
+        transition: all 0.3s ease-in-out;
     }
 
     > span:nth-child(2) {
         font-size: 13px;
         font-weight: 650;
         color: rgba(255, 255, 255, 0.5);
+        transition: all 0.3s ease-in-out;
     }
 
     
@@ -945,6 +1004,7 @@ body {
     flex-grow: 1;
     border: 0.05rem dashed rgba(255, 255, 255, 0.12);
     margin: 0 16px; /* Ensures spacing between elements */
+    transition: all 0.3s ease-in-out;
 }
 
 .experience-description ul {
@@ -975,7 +1035,7 @@ body {
     mask-repeat: no-repeat;
     -webkit-mask-image: url("assets/img/chevron-down-svgrepo-com.svg");
     mask-image: url("assets/img/chevron-down-svgrepo-com.svg");
-    opacity: 0.8;
+    opacity: 0.7;
     transition: all 0.3s ease-in-out;
 }
 
@@ -990,5 +1050,32 @@ body {
     margin-inline: auto;
     padding: 100px 56px;
     border-block: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 1;
 }
+
+
+
+.container-certificates::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: url("assets/img/dots.svg");
+    background-repeat: repeat;
+    background-size: 30px; /* Matches Framer */
+    background-position: left top;
+    
+    /* Subtle pattern effect */
+    opacity: 0.03; /* Makes pattern barely visible */
+    filter: invert(1);
+    
+    pointer-events: none;
+}
+
+
+.slide-container {
+    width: 100%;
+}
+
 
