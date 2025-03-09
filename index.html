@@ -146,7 +146,7 @@
         <section id="home">
             <div class="container-home">
 
-                <div class="stars-bg"></div>
+                <div class="home-stars-bg"></div>
 
                 <div class="d-flex justify-content-between" style="margin-bottom: 32px;">
                     <p class="mono-text" data-en="ABOUT-ME" data-pt="SOBRE-MIM"></p>
@@ -450,7 +450,7 @@
                 
             </section>
             <section id="contact">
-                <div class="contact-container">
+                <div class="container-contact">
 
                     <div class="d-flex justify-content-between" style="margin-bottom: 32px;">
                         <p class="mono-text" data-en="CONTACT-ME" data-pt="CONTACTAR"></p>
@@ -471,8 +471,8 @@
                                         <input type="text" id="name" class="form-control" placeholder="John Smith">
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="company" class="form-label">Email</label>
-                                        <input type="email" id="company" class="form-control" placeholder="name@example.com">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" id="email" class="form-control" placeholder="name@example.com">
                                     </div>
                                 </div>
                                 <div class="mt-3">
@@ -482,15 +482,44 @@
                                 <button id="contact-form-submit-btn" class="btn btn-submit" type="submit">Submit</button>
                             </form>
                         </div>
+
+                        <div>
+                            <p></p>
+
+                            <!-- EMAIL -->
+                            <div class="contact-header">
+                                <p id="contact-header-title"><span id="contact-header-email-icon" class="contact-header-icon"></span><p class="contact-header-text">Email</p></p>
+                                <div class="contact-header-divider"></div>
+                                <a id="contact-header-link" href="mailto:mail@eduardo-dcs.com" target="_blank">mail@eduardo-dcs.com</a>
+                            </div>
+
+                            <!-- LINKEDIN -->
+                            <div class="contact-header">
+                                <p id="contact-header-title"><span id="contact-header-linkedin-icon" class="contact-header-icon"></span><p class="contact-header-text">LinkedIn</p></p>
+                                <div class="contact-header-divider"></div>
+                                <a id="contact-header-link" href="https://www.linkedin.com/in/eduardo-dcs" target="_blank">@eduardo-dcs</a>
+                            </div>
+
+                            <!-- GITHUB -->
+                            <div class="contact-header">
+                                <p id="contact-header-title"><span id="contact-header-github-icon" class="contact-header-icon"></span><p class="contact-header-text">GitHub</p></p>
+                                <div class="contact-header-divider"></div>
+                                <a id="contact-header-link" href="https://github.com/eduardo-dcs" target="_blank">@eduardo-dcs</a>
+                            </div>
+
+                        </div>
+
                     </div>
                 </div>
             </section>
 
         <footer>
-           <div class="footer-container">
+           <div class="container-footer">
+                <div class="footer-stars-bg"></div>
                 <p id="footer-message" data-en="Thank you for visiting my Website!" data-pt="Obrigado por visitar o meu Website!"></p>
-                <p id="footer-name">EDUARDO</p>
-           </div>>
+                <a id="footer-repository-anchor" href="https://github.com/eduardo-dcs/Personal-Website" target="_blank" data-en="✨Visit the Repository" data-pt="✨Visitar o Repositório"></a>
+                <p id="footer-name" class="noselect">EDUARDO</p>
+           </div>
         </footer>
 
     </main>
