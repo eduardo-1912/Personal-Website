@@ -1,4 +1,4 @@
-<!-- ✨ Made by Eduardo Carvalho -->
+<!-- ✨ Made by Eduardo Carvalho (03/2025) -->
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
 <head>
@@ -11,16 +11,13 @@
     <!-- Favicon -->
     <link rel="icon" href="assets/img/favicon.png" type="image/x-icon"> <!-- CHANGE!!! -->
 
-    <!-- "Manrope" & "DM Mono" Font Import -->
+    <!-- "Manrope", "DM Mono" & "Merriweather" Font Import -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Doto:wght@100..900&family=Manrope:wght@200..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
@@ -31,12 +28,12 @@
     <!-- SIDEBAR (width >= 992px) -->
     <nav class="sidebar">
         <div class="header d-flex align-items-center">
-            <div id="pfp" class="noselect">
+            <div id="header-pfp" class="noselect">
                 <img src="assets/img/pfp.jpg" alt="Profile Picture" width="100%" height="100%"> <!-- Placeholder -->
             </div>
             <div>
-                <p id="name" class="noselect">Eduardo<span style="padding-right: 5px;"></span>Carvalho</p>
-                <p id="sub-text" class="noselect" data-en="IT & Cybersecurity" data-pt="IT & Cibersegurança"></p>
+                <p id="header-name" class="noselect">Eduardo<span style="padding-right: 5px;"></span>Carvalho</p>
+                <p id="header-subtext" class="noselect" data-en="IT & Cybersecurity" data-pt="IT & Cibersegurança"></p>
             </div>
         </div>
         <div class="d-flex flex-column" style="gap: 40px;">
@@ -82,56 +79,52 @@
         </div>
     </nav>
 
-    <!-- NAVBAR (width < 992px) -->
-    <nav class="navbar navbar-expand-lg sticky-top navbar-dark d-lg-none">
+    <!--#region NAVBAR (width < 992px) -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark d-lg-none">
+      <!-- HEADER -->
+      <div class="header d-flex align-items-center">
+          <div id="header-pfp" class="noselect">
+              <img src="assets/img/pfp.jpg" alt="Profile Picture" width="100%" height="100%"> <!-- Placeholder -->
+          </div>
+          <div>
+              <p id="header-name" class="noselect">Eduardo<span style="padding-right: 5px;"></span>Carvalho</p>
+              <p id="header-subtext" class="noselect" data-en="IT & Cybersecurity" data-pt="IT & Cibersegurança"></p>
+          </div>
+      </div>
 
-      
-        <!-- HEADER -->
-        <div class="header d-flex align-items-center">
-            <div id="pfp" class="noselect">
-                <img src="assets/img/pfp.jpg" alt="Profile Picture" width="100%" height="100%"> <!-- Placeholder -->
+      <!-- Navbar Toggler -->
+      <button class="custom-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="icon-bars"></span>
+          <span class="icon-x"></span>
+      </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="my-4">
+                <ul class="navbar-nav nav-items">
+                    <li class="nav-item"><a id="nav-link-home" class="nav-link" href="#home"><span></span><p data-en="Home" data-pt="Ínicio"></p></a></li>
+                    <li class="nav-item"><a id="nav-link-certificates" class="nav-link" href="#certificates"><span></span><p data-en="Certificates" data-pt="Certificados"></p></a></li>
+                    <li class="nav-item"><a id="nav-link-projects" class="nav-link" href="#projects"><span></span><p data-en="Projects" data-pt="Projetos"></p></a></li>
+                    <li class="nav-item"><a id="nav-link-contact" class="nav-link" href="#contact"><span></span><p data-en="Contact" data-pt="Contactar"></p></a></li>
+                </ul>
             </div>
-            <div>
-                <p id="name" class="noselect">Eduardo<span style="padding-right: 5px;"></span>Carvalho</p>
-                <p id="sub-text" class="noselect" data-en="IT & Cybersecurity" data-pt="IT & Cibersegurança"></p>
+            
+            <div class="radio-inputs" style="margin-bottom: 18px;"> 
+                <label class="radio">
+                    <input type="radio" name="radio" value="en" checked>
+                    <span class="name">English</span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio" value="pt">
+                    <span class="name">Português</span>
+                </label>
             </div>
+
+            <button id="btn-download-cv" class="btn w-100 mb-3"><span></span>Download CV</button>
+
         </div>
 
-        <!-- Navbar Toggler -->
-        <button class="custom-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="icon-bars"></span>
-            <span class="icon-x"></span>
-        </button>
-
-
-
-
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="my-4">
-                    <ul class="navbar-nav nav-items">
-                        <li class="nav-item"><a id="nav-link-home" class="nav-link" href="#home"><span></span><p data-en="Home" data-pt="Ínicio"></p></a></li>
-                        <li class="nav-item"><a id="nav-link-certificates" class="nav-link" href="#certificates"><span></span><p data-en="Certificates" data-pt="Certificados"></p></a></li>
-                        <li class="nav-item"><a id="nav-link-projects" class="nav-link" href="#projects"><span></span><p data-en="Projects" data-pt="Projetos"></p></a></li>
-                        <li class="nav-item"><a id="nav-link-contact" class="nav-link" href="#contact"><span></span><p data-en="Contact" data-pt="Contactar"></p></a></li>
-                    </ul>
-                </div>
-                
-                <div class="radio-inputs" style="margin-bottom: 18px;"> 
-                    <label class="radio">
-                        <input type="radio" name="radio" value="en" checked>
-                        <span class="name">English</span>
-                    </label>
-                    <label class="radio">
-                        <input type="radio" name="radio" value="pt">
-                        <span class="name">Português</span>
-                    </label>
-                </div>
-
-                <button id="btn-download-cv" class="btn w-100 mb-3"><span></span>Download CV</button>
-
-            </div>
-
     </nav>
+    <!--#endregion -->
 
     <main class="main">
 
@@ -156,11 +149,11 @@
                 <div class="stars-bg"></div>
 
                 <div class="d-flex justify-content-between" style="margin-bottom: 32px;">
-                    <p class="mono-text" data-en="WHO-AM-I" data-pt="QUEM-SOU-EU"></p>
-                    <a id="skills-btn" class="text-white mono-text" href="#">SKILLS<span></span></a>
+                    <p class="mono-text" data-en="ABOUT-ME" data-pt="SOBRE-MIM"></p>
+                    <a id="skills-btn" class="text-white mono-text" href="#projects">SKILLS<span></span></a>
                 </div>
 
-                <h1 id="home-title" data-en="Hello, I'm Eduardo" data-pt="Olá, sou o Eduardo"></h1>
+                <h1><span id="home-title" data-en="Hello, I'm " data-pt="Olá, sou o "></span><span id="home-name" class="ms-1">Eduardo</span></h1>
 
                 <div>
                     <p class="about-text mb-3">Replace this text product and graphic designer with a knack for creating meaningful, user-friendly designs. Right now, I’m leading design at NexusLab, where we’re redefining digital interactions.</p>
@@ -173,13 +166,14 @@
 
                 <!-- WORK EXPERIENCE -->
                 <div class="my-4">
-                    <p class="mb-2 ms-1 mono fs-15 opacity-80" data-en="WORK EXPERIENCE -.-." data-pt="EXPERIÊNCIA PROFISSIONAL -.-."></p>
+                    <p class="mb-2 ms-1 fs-15 mono opacity-60" data-en="WORK EXPERIENCE" data-pt="EXPERIÊNCIA PROFISSIONAL"></p>
                     <div class="experience">
                         <div class="experience-item">
                             <div class="experience-header" data-bs-toggle="collapse" data-bs-target="#work1" aria-expande="false">
                                 <div class="experience-left">
                                     <img src="assets/img/work1.svg">
                                     <span>Company One</span>
+                                    <span class="experience-title-mobile d-none">IT Helpdesk</span>
                                 </div>
                                 <div class="experience-divider"></div>
                                 <div class="experience-right">
@@ -201,6 +195,7 @@
                                 <div class="experience-left">
                                     <img src="assets/img/work2.svg">
                                     <span>Company Two</span>
+                                    <span class="experience-title-mobile d-none">IT Security Intern</span>
                                 </div>
                                 <div class="experience-divider"></div>
                                 <div class="experience-right">
@@ -222,13 +217,14 @@
 
                 <!-- EDUCATION -->
                 <div class="mt-4">
-                    <p class="mb-2 ms-1 mono fs-15 opacity-80" data-en="EDUCATION -.-." data-pt="EDUCAÇÃO -.-."></p>
+                    <p class="mb-2 ms-1 mono fs-15 opacity-60" data-en="EDUCATION" data-pt="EDUCAÇÃO"></p>
                     <div class="experience">
                         <div class="experience-item">
                             <div class="experience-header" data-bs-toggle="collapse" data-bs-target="#education1" aria-expande="false">
                                 <div class="experience-left">
                                     <img src="assets/img/logo-ipleiria.jpg">
                                     <span data-en="University of Leiria" data-pt="Politécnico de Leiria"></span>
+                                    <span class="experience-title-mobile d-none" data-en="Information Systems" data-pt="Programação de SI"></span>
                                 </div>
                                 <div class="experience-divider"></div>
                                 <div class="experience-right">
@@ -253,275 +249,196 @@
         <!-- CERTIFICATES -->
         <section id="certificates">
             <div class="container-certificates">
+                <div class="inner-container-certificates">
+
+                
                 <div class="d-flex justify-content-between mx-3" style="margin-bottom: 32px;">
                     <p class="mono-text" data-en="CERTIFICATES" data-pt="CERTIFICADOS"></p>
                     <a class="text-white text-decoration-none" href="#" target="_blank"><p class="mono-text" data-en="VERIFY" data-pt="VERIFICAR"></p><span></span></a>
                 </div>
 
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-
-                <!-- If we need scrollbar -->
-                <div class="swiper-scrollbar"></div>
-
-                            
-
-                <div class="swiper mySwiper container">
-
-                    
-                    <div class="swiper-wrapper content">
-              
-                      <div class="swiper-slide card">
-                        <div class="card-content">
-                          <div class="image">
-                            <img src="images/1.jpg" alt="">
-                          </div>
-              
-
-              
-                          <div class="name-profession">
-                            <span class="name">Ally Pearson</span>
-                            <span class="profession">Web Developer</span>
-                          </div>
-              
-                          <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                          </div>
-              
-                          <div class="button">
-                            <button class="aboutMe">About Me</button>
-                            <button class="hireMe">Hire Me</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide card">
-                        <div class="card-content">
-                          <div class="image">
-                            <img src="images/2.jpg" alt="">
-                          </div>
-              
-
-              
-                          <div class="name-profession">
-                            <span class="name">Dominic Wells</span>
-                            <span class="profession">Software Engineer</span>
-                          </div>
-              
-                          <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                          </div>
-              
-                          <div class="button">
-                            <button class="aboutMe">About Me</button>
-                            <button class="hireMe">Hire Me</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide card">
-                        <div class="card-content">
-                          <div class="image">
-                            <img src="images/3.jpg" alt="">
-                          </div>
-              
-
-              
-                          <div class="name-profession">
-                            <span class="name">Kylie Smith</span>
-                            <span class="profession">UX/UI Desinger</span>
-                          </div>
-              
-                          <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                          </div>
-              
-                          <div class="button">
-                            <button class="aboutMe">About Me</button>
-                            <button class="hireMe">Hire Me</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide card">
-                        <div class="card-content">
-                          <div class="image">
-                            <img src="images/4.jpg" alt="">
-                          </div>
-              
-
-              
-                          <div class="name-profession">
-                            <span class="name">Stephanie Xia</span>
-                            <span class="profession">Backend Developer</span>
-                          </div>
-              
-                          <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                          </div>
-              
-                          <div class="button">
-                            <button class="aboutMe">About Me</button>
-                            <button class="hireMe">Hire Me</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide card">
-                        <div class="card-content">
-                          <div class="image">
-                            <img src="images/5.jpg" alt="">
-                          </div>
-              
-
-              
-                          <div class="name-profession">
-                            <span class="name">Jordan Tapp</span>
-                            <span class="profession">Network Engineer</span>
-                          </div>
-              
-                          <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                          </div>
-              
-                          <div class="button">
-                            <button class="aboutMe">About Me</button>
-                            <button class="hireMe">Hire Me</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide card">
-                        <div class="card-content">
-                          <div class="image">
-                            <img src="images/6.jpg" alt="">
-                          </div>
-              
-
-              
-                          <div class="name-profession">
-                            <span class="name">Caroline Parker</span>
-                            <span class="profession">Systems Analyst</span>
-                          </div>
-              
-                          <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                          </div>
-              
-                          <div class="button">
-                            <button class="aboutMe">About Me</button>
-                            <button class="hireMe">Hire Me</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide card">
-                        <div class="card-content">
-                          <div class="image">
-                            <img src="images/7.jpg" alt="">
-                          </div>
-              
-
-              
-                          <div class="name-profession">
-                            <span class="name">Maddie Crox</span>
-                            <span class="profession">Frontend Developer</span>
-                          </div>
-              
-                          <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                          </div>
-              
-                          <div class="button">
-                            <button class="aboutMe">About Me</button>
-                            <button class="hireMe">Hire Me</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide card">
-                        <div class="card-content">
-                          <div class="image">
-                            <img src="images/8.jpg" alt="">
-                          </div>
-              
-
-              
-                          <div class="name-profession">
-                            <span class="name">Simone Mitchell</span>
-                            <span class="profession">Java Developer</span>
-                          </div>
-              
-                          <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                          </div>
-              
-                          <div class="button">
-                            <button class="aboutMe">About Me</button>
-                            <button class="hireMe">Hire Me</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide card">
-                        <div class="card-content">
-                          <div class="image">
-                            <img src="images/9.jpg" alt="">
-                          </div>
-              
-
-              
-                          <div class="name-profession">
-                            <span class="name">Heather Cornwell</span>
-                            <span class="profession">Systems Engineer</span>
-                          </div>
-              
-                          <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                          </div>
-              
-                          <div class="button">
-                            <button class="aboutMe">About Me</button>
-                            <button class="hireMe">Hire Me</button>
-                          </div>
-                        </div>
-                      </div>
-              
+                <div class="d-flex justify-content-center row certificate-row g-4 row-cols-1 row-cols-sm-2 row-cols-xxl-4 mx-auto">
+                    <div class="col certificate-col">
+                        <a class="card certificate-card h-100" href="#" target="_blank">
+                            <img class="card-img-top" src="assets/certificates/comptia-security-plus.jpg">
+                            <div class="card-body certificate-card-body">
+                                <div class="d-flex flex-column gap-1">
+                                    <div>
+                                        <p class="certificate-card-title">Security+</p>
+                                    </div>
+                                    <div>
+                                        <div class="certificate-card-information">
+                                            <p id="certificate-issuer"><span></span>CompTIA</p>
+                                            <p id="certificate-date"><span></span>07/2025</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span id="certificate-link-icon"></span>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                  </div>
-                            
+                    <div class="col certificate-col">
+                        <a class="card certificate-card h-100" href="#" target="_blank">
+                            <img class="card-img-top" src="assets/certificates/aws-cloud-practicioner.jpg">
+                            <div class="card-body certificate-card-body">
+                                <div class="d-flex flex-column gap-1">
+                                    <div>
+                                        <p class="certificate-card-title">Certified Cloud Practicioner</p>
+                                    </div>
+                                    <div>
+                                        <div class="certificate-card-information">
+                                            <p id="certificate-issuer"><span></span>AWS</p>
+                                            <p id="certificate-date"><span></span>09/2025</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span id="certificate-link-icon"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col certificate-col">
+                        <a class="card certificate-card h-100" href="#" target="_blank">
+                            <img class="card-img-top" src="assets/certificates/google-cybersecurity.jpg">
+                            <div class="card-body certificate-card-body">
+                                <div class="d-flex flex-column gap-1">
+                                    <div>
+                                        <p class="certificate-card-title">Cybersecurity Professional</p>
+                                    </div>
+                                    <div>
+                                        <div class="certificate-card-information">
+                                            <p id="certificate-issuer"><span></span>Google</p>
+                                            <p id="certificate-date"><span></span>05/2025</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span id="certificate-link-icon"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col certificate-col">
+                        <a class="card certificate-card h-100" href="#" target="_blank">
+                            <img class="card-img-top" src="assets/certificates/comptia-security-plus.jpg">
+                            <div class="card-body certificate-card-body">
+                                <div class="d-flex flex-column gap-1">
+                                    <div>
+                                        <p class="certificate-card-title">Security+</p>
+                                    </div>
+                                    <div>
+                                        <div class="certificate-card-information">
+                                            <p id="certificate-issuer"><span></span>CompTIA</p>
+                                            <p id="certificate-date"><span></span>06/2024</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span id="certificate-link-icon"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                <div class="collapse" id="collapseExample">
+                    <div class="d-flex justify-content-center row certificate-row row-cols-1 row-cols-md-2 row-cols-xxl-4 mx-auto pt-4">
+                        <div class="col certificate-col">
+                            <a class="card certificate-card h-100" href="#" target="_blank">
+                                <img class="card-img-top" src="assets/certificates/comptia-security-plus.jpg">
+                                <div class="card-body certificate-card-body">
+                                    <div class="d-flex flex-column gap-1">
+                                        <div>
+                                            <p class="certificate-card-title">Security+</p>
+                                        </div>
+                                        <div>
+                                            <div class="certificate-card-information">
+                                                <p id="certificate-issuer"><span></span>CompTIA</p>
+                                                <p id="certificate-date"><span></span>07/2025</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span id="certificate-link-icon"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col certificate-col">
+                            <a class="card certificate-card h-100" href="#" target="_blank">
+                                <img class="card-img-top" src="assets/certificates/aws-cloud-practicioner.jpg">
+                                <div class="card-body certificate-card-body">
+                                    <div class="d-flex flex-column gap-1">
+                                        <div>
+                                            <p class="certificate-card-title">Certified Cloud Practicioner</p>
+                                        </div>
+                                        <div>
+                                            <div class="certificate-card-information">
+                                                <p id="certificate-issuer"><span></span>AWS</p>
+                                                <p id="certificate-date"><span></span>09/2025</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span id="certificate-link-icon"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col certificate-col">
+                            <a class="card certificate-card h-100" href="#" target="_blank">
+                                <img class="card-img-top" src="assets/certificates/google-cybersecurity.jpg">
+                                <div class="card-body certificate-card-body">
+                                    <div class="d-flex flex-column gap-1">
+                                        <div>
+                                            <p class="certificate-card-title">Cybersecurity Professional</p>
+                                        </div>
+                                        <div>
+                                            <div class="certificate-card-information">
+                                                <p id="certificate-issuer"><span></span>Google</p>
+                                                <p id="certificate-date"><span></span>05/2025</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span id="certificate-link-icon"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col certificate-col">
+                            <a class="card certificate-card h-100" href="#" target="_blank">
+                                <img class="card-img-top" src="assets/certificates/comptia-security-plus.jpg">
+                                <div class="card-body certificate-card-body">
+                                    <div class="d-flex flex-column gap-1">
+                                        <div>
+                                            <p class="certificate-card-title">Security+</p>
+                                        </div>
+                                        <div>
+                                            <div class="certificate-card-information">
+                                                <p id="certificate-issuer"><span></span>CompTIA</p>
+                                                <p id="certificate-date"><span></span>06/2024</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span id="certificate-link-icon"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex pt-5 justify-content-center">
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" data-en="Show All" data-pt="Ver todas"></button>
+                </div>
+
+                </div>
 
             </div>
         </section>
@@ -529,16 +446,52 @@
 
 
 
-        <div class="container">
             <section id="projects">
-                <img src="assets/img/placeholder.jpg" width="100%"
+                
             </section>
             <section id="contact">
-                <img src="assets/img/placeholder.jpg" width="100%">
+                <div class="contact-container">
+
+                    <div class="d-flex justify-content-between" style="margin-bottom: 32px;">
+                        <p class="mono-text" data-en="CONTACT-ME" data-pt="CONTACTAR"></p>
+                        <p class="mono-text">LINKS</p>
+                    </div>
+
+                    <div class="d-flex flex-column gap-4">
+                        <div>
+                            <h2 id="contact-title" data-en="Get in Touch" data-pt="Entrar em Contacto"></h2>
+                            <p id="contact-subtitle" data-en="Have a question? Send me a message, and I'll get back to you soon." data-pt="Tens alguma questão? Manda-me uma mensagem, e responderei o mais cedo possível."></p>
+                        </div>
+
+                        <div class="contact-form">
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label for="name" class="form-label" data-en="Name" data-pt="Nome"></label>
+                                        <input type="text" id="name" class="form-control" placeholder="John Smith">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="company" class="form-label">Email</label>
+                                        <input type="email" id="company" class="form-control" placeholder="name@example.com">
+                                    </div>
+                                </div>
+                                <div class="mt-3">
+                                    <label for="message" class="form-label" data-en="Message" data-pt="Mensagem"></label>
+                                    <textarea id="message" class="form-control" rows="7"></textarea>
+                                </div>
+                                <button id="contact-form-submit-btn" class="btn btn-submit" type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </section>
-        </div>
 
-
+        <footer>
+           <div class="footer-container">
+                <p id="footer-message" data-en="Thank you for visiting my Website!" data-pt="Obrigado por visitar o meu Website!"></p>
+                <p id="footer-name">EDUARDO</p>
+           </div>>
+        </footer>
 
     </main>
     
@@ -547,10 +500,7 @@
 
 
     <!-- Bootstrap JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Swiper JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     <!-- JavaScript -->
     <script src="script.js"></script>
