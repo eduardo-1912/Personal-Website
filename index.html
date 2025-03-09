@@ -73,7 +73,25 @@
                     <p id="location">Leiria, Portugal</p>
                 </div>
                 <div>
-                    <button id="btn-download-cv" class="btn w-100"><span></span>Download CV</button>
+                    
+                    <div class="dropdown">
+                        <!-- Button that toggles the collapse -->
+                        <button id="btn-download-cv" class="btn w-100" data-bs-toggle="collapse" data-bs-target="#cv-collapse" aria-expanded="false" aria-controls="cv-collapse">
+                            <span></span>Download CV
+                        </button>
+                    
+                        <!-- Collapsible dropdown -->
+                        <div id="cv-collapse" class="collapse">
+                            <div class="pt-3">
+                                <div class="card card-body p-2">
+                                <a class="dropdown-item" href="assets/CV_EN_Eduardo_Carvalho.pdf" target="_blank">Download in English</a>
+                                <a class="dropdown-item" href="assets/CV_PT_Eduardo_Carvalho.pdf" target="_blank">Download in Portuguese</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
                 </div>
             </div>
         </div>
@@ -128,8 +146,8 @@
 
     <main class="main">
 
-        <!-- BLUR BOTTOM GRADIENT -->
-        <div style="bottom: 0; flex: none; height: 156px; left: 0; pointer-events: none; position: fixed; right: 0; z-index: 2;">
+        <!-- BLUR GRADIENT -->
+        <div id="blur-gradient" style="bottom: 0; flex: none; height: 156px; left: 0; pointer-events: none; position: fixed; right: 0; z-index: 2;">
             <div style="position: absolute; inset: 0px; overflow: hidden;">
                 <div style="position: absolute; inset: 0px; z-index: 1; backdrop-filter: blur(0.125px); mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 25%, rgba(0, 0, 0, 0) 37.5%); border-radius: 0px; pointer-events: none;"></div>
                 <div style="position: absolute; inset: 0px; z-index: 2; backdrop-filter: blur(0.25px); mask-image: linear-gradient(rgba(0, 0, 0, 0) 12.5%, rgb(0, 0, 0) 25%, rgb(0, 0, 0) 37.5%, rgba(0, 0, 0, 0) 50%); border-radius: 0px; pointer-events: none;"></div>
@@ -153,10 +171,10 @@
                     <a id="skills-btn" class="text-white mono-text" href="#projects">SKILLS<span></span></a>
                 </div>
 
-                <h1><span id="home-title" data-en="Hello, I'm " data-pt="Olá, sou o "></span><span id="home-name" class="ms-1">Eduardo</span></h1>
+                <h1 class="noselect"><span id="home-title" data-en="Hello, I'm " data-pt="Olá, sou o "></span><span id="home-name" class="ms-1">Eduardo</span></h1>
 
                 <div>
-                    <p class="about-text mb-3">Replace this text product and graphic designer with a knack for creating meaningful, user-friendly designs. Right now, I’m leading design at NexusLab, where we’re redefining digital interactions.</p>
+                    <p class="about-text mb-2">Replace this text product and graphic designer with a knack for creating meaningful, user-friendly designs. Right now, I’m leading design at NexusLab, where we’re redefining digital interactions.</p>
                     <p class="about-text mb-3">Before NexusLab, I spent a few years at BrightPath, crafting intuitive designs for cutting-edge apps. I’ve also worked with Flux Studios, PixelForge, and Orbital Designs, focusing on branding and UX.</p>
                     <div class="d-flex align-items-center">
                         <a id="contact-btn" class="my-3" href="#contact"><span></span><p class="fs-15" data-en="Contact me" data-pt="Contactar"></p></a>
@@ -257,7 +275,7 @@
                     <a class="text-white text-decoration-none" href="#" target="_blank"><p class="mono-text" data-en="VERIFY" data-pt="VERIFICAR"></p><span></span></a>
                 </div>
 
-                <div class="d-flex justify-content-center row certificate-row g-4 row-cols-1 row-cols-sm-2 row-cols-xxl-4 mx-auto">
+                <div class="d-flex justify-content-center row certificate-row row-cols-1 row-cols-sm-2 row-cols-xxl-4 mx-auto">
                     <div class="col certificate-col">
                         <a class="card certificate-card h-100" href="#" target="_blank">
                             <img class="card-img-top" src="assets/certificates/comptia-security-plus.jpg">
@@ -345,8 +363,8 @@
                 </div>
                 
 
-                <div class="collapse" id="collapseExample">
-                    <div class="d-flex justify-content-center row certificate-row row-cols-1 row-cols-md-2 row-cols-xxl-4 mx-auto pt-4">
+                <div id="collapsed-certificates" class="collapse">
+                    <div class="d-flex justify-content-center row certificate-row row-cols-1 row-cols-md-2 row-cols-xxl-4 mx-auto">
                         <div class="col certificate-col">
                             <a class="card certificate-card h-100" href="#" target="_blank">
                                 <img class="card-img-top" src="assets/certificates/comptia-security-plus.jpg">
@@ -435,7 +453,7 @@
                 </div>
 
                 <div class="d-flex pt-5 justify-content-center">
-                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" data-en="Show All" data-pt="Ver todas"></button>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapsed-certificates" aria-expanded="false" aria-controls="collapsed-certificates" data-en="Show All" data-pt="Ver todas"></button>
                 </div>
 
                 </div>
@@ -459,7 +477,7 @@
 
                     <div class="d-flex flex-column gap-4">
                         <div>
-                            <h2 id="contact-title" data-en="Get in Touch" data-pt="Entrar em Contacto"></h2>
+                            <h2 id="contact-title" data-en="Get in Touch" data-pt="Entra em Contacto"></h2>
                             <p id="contact-subtitle" data-en="Have a question? Send me a message, and I'll get back to you soon." data-pt="Tens alguma questão? Manda-me uma mensagem, e responderei o mais cedo possível."></p>
                         </div>
 
@@ -470,7 +488,7 @@
                                         <label for="name" class="form-label" data-en="Name" data-pt="Nome"></label>
                                         <input type="text" id="name" class="form-control" placeholder="John Smith">
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 mt-3 mt-md-0">
                                         <label for="email" class="form-label">Email</label>
                                         <input type="email" id="email" class="form-control" placeholder="name@example.com">
                                     </div>
@@ -516,9 +534,11 @@
         <footer>
            <div class="container-footer">
                 <div class="footer-stars-bg"></div>
-                <p id="footer-message" data-en="Thank you for visiting my Website!" data-pt="Obrigado por visitar o meu Website!"></p>
-                <a id="footer-repository-anchor" href="https://github.com/eduardo-dcs/Personal-Website" target="_blank" data-en="✨Visit the Repository" data-pt="✨Visitar o Repositório"></a>
-                <p id="footer-name" class="noselect">EDUARDO</p>
+                <div class="text-center">
+                    <p id="footer-message" data-en="Thank you for visiting!" data-pt="Obrigado pela visita!"></p>
+                    <a id="footer-repository-anchor" href="https://github.com/eduardo-dcs/Personal-Website" target="_blank" data-en="✨GitHub Repository" data-pt="✨Repositório GitHub"></a>
+                    <p id="footer-name" class="noselect">EDUARDO</p>
+                </div>
            </div>
         </footer>
 

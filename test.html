@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+    <style>
+
+        body {
+            background-color: rgb(20, 20, 20);
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+        
+        /* Collapsible dropdown */
+
+        
+        /* Dropdown links */
+
+        .cv-dropdown-items {
+            width: 100%;
+            margin-top: 12px;
+            margin-bottom: 8px;
+        }
+
+        #cv-collapse .cv-dropdown-btn {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            padding: 8px 12px;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            align-content: center;
+            background-color: rgb(25, 25, 25);
+            border: 1px dashed rgba(255, 255, 255, 0.12);
+            border-radius: 10px;
+            box-shadow: rgba(255, 255, 255, 0.07) 0px 0.557334px 1.672px -1.125px inset, rgba(255, 255, 255, 0.063) 0px 1.69015px 5.07046px -2.25px inset, rgba(255, 255, 255, 0.05) 0px 4.46786px 13.4036px -3.375px inset, rgba(255, 255, 255, 0.008) 0px 14px 42px -4.5px inset;
+            z-index: 400;
+
+            span {
+                display: inline-block;
+                width: 17px;
+                height: 17px;
+                background-size: 100% 100%;
+                object-fit: scale-down;
+                background-color: rgb(255, 255, 255);
+                -webkit-mask-size: contain;
+                -webkit-mask-repeat: no-repeat;
+                mask-size: contain;
+                mask-repeat: no-repeat;
+                margin-right: 8px;
+                -webkit-mask-image: url("assets/img/file-pdf-duotone-svgrepo-com.svg");
+                mask-image: url("assets/img/file-pdf-duotone-svgrepo-com.svg");
+                opacity: 0.8;
+                transition: all 0.3s ease-in-out;
+            }
+
+        }
+
+        #cv-dropdown-btn:hover {
+            color: rgba(255, 255, 255, 1);
+            box-shadow: inset 0px 0.6021873017743928px 1.083937143193907px -0.9166666666666666px rgba(255, 255, 255, 0.24479), inset 0px 2.288533303243457px 4.119359945838223px -1.8333333333333333px rgba(255, 255, 255, 0.2372), inset 0px 10px 18px -2.75px rgba(255, 255, 255, 0.2025), 0px 0px 20px 1px rgba(255, 255, 255, 0.03), 0px 0px 0px 4px var(--token-cd0281a4-2a25-40c9-990a-e12d48b5ead7, rgba(255, 255, 255, 0.08));
+            background-color: rgba(40, 40, 40, 0.8);
+            > span {
+                opacity: 1;
+            }
+        }
+        
+
+        #download-cv-btn {
+            background-color: rgb(25, 25, 25);
+            border: 1px dashed rgba(255, 255, 255, 0.12);
+            border-radius: 10px;
+            box-shadow: rgba(255, 255, 255, 0.07) 0px 0.557334px 1.672px -1.125px inset, rgba(255, 255, 255, 0.063) 0px 1.69015px 5.07046px -2.25px inset, rgba(255, 255, 255, 0.05) 0px 4.46786px 13.4036px -3.375px inset, rgba(255, 255, 255, 0.008) 0px 14px 42px -4.5px inset;
+            padding-block: 10px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.8);
+            transition: all 0.25s ease-in-out;
+            span {
+                display: inline-block;
+                width: 17px;
+                height: 17px;
+                background-size: 100% 100%;
+                object-fit: scale-down;
+                background-color: rgb(255, 255, 255);
+                -webkit-mask-size: contain;
+                -webkit-mask-repeat: no-repeat;
+                mask-size: contain;
+                mask-repeat: no-repeat;
+                margin-right: 8px;
+                -webkit-mask-image: url("assets/img/download-simple-duotone-svgrepo-com.svg");
+                mask-image: url("assets/img/download-simple-duotone-svgrepo-com.svg");
+                opacity: 0.8;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+        
+
+
+    </style>
+
+</head>
+<body>
+    <div class="m-5" style="width: 260px;">
+                    
+        <button id="download-cv-btn" class="btn w-100 flex-column" data-bs-toggle="collapse" data-bs-target="#cv-collapse" aria-expanded="false" aria-controls="cv-collapse">
+            <!-- Button that toggles the collapse -->
+            <div class="d-flex flex-row align-items-center">
+                <span></span>Download CV
+            </div>
+        
+            <!-- Collapsible dropdown -->
+            <div id="cv-collapse" class="collapse">
+                <div class="cv-dropdown-items">
+                    <a class="cv-dropdown-btn mb-2" href="assets/CV_EN_Eduardo_Carvalho.pdf" target="_blank"><span></span><p data-en="English" data-pt="Inglês"></p>English</a>
+                    <a class="cv-dropdown-btn" href="assets/CV_PT_Eduardo_Carvalho.pdf" target="_blank"><span></span><p data-en="Portuguese" data-pt="Português">Portuguese</p></a>
+                </div>
+            </div>
+        </button>
+        
+        
+    </div>
+
+
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>

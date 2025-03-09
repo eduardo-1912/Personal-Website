@@ -16,6 +16,14 @@
     background: radial-gradient(circle, rgba(100, 100, 100, 1) 20%, rgba(85, 85, 85, 1) 100%); /*Hover Color */
 }
 
+
+::selection {
+    background: rgba(100, 100, 100, 0.7); /* Mid-gray */
+    color: rgb(240, 240, 240); /* Light gray */
+    filter: grayscale(100%);
+}
+
+
 * {
     font-family: "Manrope", sans-serif;
     font-weight: 500;
@@ -36,7 +44,7 @@ p {
 }
 
 body {
-    background-color: rgba(18, 18, 18, 1);
+    background: rgb(24,24,24);
 }
 
 .fs-14 {
@@ -102,7 +110,7 @@ body {
     background: rgb(4,3,28);
     background: radial-gradient(circle, rgb(20, 20, 20) 0%, rgba(15,15,15,1) 100%);
     padding: 24px 18px;
-    gap: 36px;
+    gap: 30px;
 }
 
 .header {
@@ -621,7 +629,7 @@ body {
 .main {
     margin-left: 260px;
     min-height: 100vh;
-    background: rgb(17, 17, 17);
+    background: rgb(18, 18, 18);
     color: #fff; 
 }
 
@@ -688,7 +696,7 @@ body {
 }
 
 #home-title {
-    font-weight: 600;
+    font-weight: 750;
     font-size: 34px;
     margin-bottom: 20px;
     background: rgb(255,255,255);
@@ -976,7 +984,6 @@ body {
 }
 
 
-
 .container-certificates::before {
     content: "";
     position: absolute;
@@ -994,6 +1001,10 @@ body {
 .inner-container-certificates {
     margin-inline: auto;
     max-width: 115rem;
+}
+
+.certificate-col {
+    padding: 12px;
 }
 
 .certificate-card {
@@ -1141,7 +1152,7 @@ body {
 
 
 
-
+/* CONTACT */
 .container-contact {
     width: 100%;
     max-width: 53rem;
@@ -1178,12 +1189,21 @@ body {
             border: 1px solid rgba(155, 155, 155, 0.1);
             background-color: rgb(28, 28, 28);
             color: white;
+            transition: all 0.25s ease-in-out;
+        }
+
+        .form-control:focus {
+            box-shadow: 0 0 0 .2rem rgba(255, 255, 255, 0.3);
+            background-color: rgb(38, 38, 38);
         }
 
         .form-control::placeholder { 
             color: rgba(255, 255, 255, 0.4); /* Adjust opacity */
         }
         
+        textarea{
+            resize: none;
+        }
 
         #contact-form-submit-btn {
             font-size: 16px;
@@ -1255,6 +1275,8 @@ body {
             }
         }
 
+
+
         .contact-header-divider {
             flex-grow: 1;
             border: 0.05rem dashed rgba(255, 255, 255, 0.12);
@@ -1281,9 +1303,6 @@ body {
     }
 
 }
-
-
-
 
 /* FOOTER */
 footer {
@@ -1313,10 +1332,8 @@ footer {
     
     
         #footer-message {
-            display: flex;
-            justify-content: center;
-            padding: 80px 5% 8px;
-            font-size: 24px;
+            padding: 80px 4% 2px;
+            font-size: 28px;
             opacity: 0.95;
             font-family: 'Doto';
             font-weight: 700;
@@ -1324,9 +1341,7 @@ footer {
         }
     
         #footer-repository-anchor {
-            display: flex;
-            justify-content: center;
-            padding-inline: 5%;
+            padding-inline: 4%;
             font-size: 15px;
             font-family: 'DM Mono';
             text-align: center;
@@ -1348,9 +1363,9 @@ footer {
             display: flex;
             justify-content: center;
             font-size: clamp(30px, calc(2rem + 11vw), 170px);
-            padding: 0 10px 30px;
+            padding: 10px 10px 20px;
             background: rgb(255,255,255);
-            background: linear-gradient(-180deg, rgba(255, 255, 255, 0.23) 0%, rgba(255, 255, 255, 0.05) 45%, rgba(255, 255, 255, 0) 70%);
+            background: linear-gradient(-180deg, rgba(255, 255, 255, 0.23) 0%, rgba(255, 255, 255, 0.04) 55%, rgba(255, 255, 255, 0) 70%);
             background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: 700;
@@ -1361,9 +1376,20 @@ footer {
 }
 
 /* #region @MEDIAS */
+@media (max-height: 550px) {
+    #blur-gradient {
+        display: none !important;
+    }
+}
+
 @media (max-width: 342px) {
     .contact-header-text {
         display: none !important;
+    }
+}
+@media (max-width: 419px) {
+    #footer-message {
+        font-size: 24px !important;
     }
 }
 @media (min-width: 440px) and (max-width: 592px) {
@@ -1404,6 +1430,14 @@ footer {
             display: none;
         }
     }
+
+    #footer-name {
+        padding-block: 30px 30px !important;
+        background: linear-gradient(-180deg, rgba(255, 255, 255, 0.23) 0%, rgba(255, 255, 255, 0.05) 55%, rgba(255, 255, 255, 0) 80%) !important;
+        background-clip: text  !important;
+        -webkit-text-fill-color: transparent  !important;
+    }
+
 }
 @media (max-height: 699px) {
     #sidebar-links {
@@ -1435,7 +1469,7 @@ footer {
 
     .main {
         margin-left: 0;
-        margin-top: 74px;
+        padding-top: 74px;
     }
 
     .container-home, .container-contact {
@@ -1459,61 +1493,3 @@ footer {
 /* #endregion */
 
 
-/*#region DELETE */
-/* Modal Overlay (Hidden by Default) */
-.cv-modal {
-    display: none; /* Hidden until button click */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000; /* Ensure it's above everything */
-    backdrop-filter: blur(5px);
-}
-
- .cv-modal-content {
-    position: relative; /* Ensures .close-btn is positioned inside */
-    background: rgba(15, 15, 15, 0.85);
-    backdrop-filter: blur(10px);
-    padding: 2.5% 3%;
-    border-radius: 10px;
-    border: 1px dashed rgba(255, 255, 255, 0.1);
-    box-shadow: rgba(255, 255, 255, 0.07) 0px 0.557334px 1.672px -1.125px inset, rgba(255, 255, 255, 0.063) 0px 1.69015px 5.07046px -2.25px inset, rgba(255, 255, 255, 0.05) 0px 4.46786px 13.4036px -3.375px inset, rgba(255, 255, 255, 0.008) 0px 14px 42px -4.5px inset;
-    text-align: center;
-    min-width: 300px;
-    max-width: 90%;
-}
-
-#cv-modal-subtitle {
-    opacity: 0.9;
-    font-size: 16px;
-    padding-left: 10px;
-    font-family: 'DM Mono', monospace;
-    margin-bottom: 20px;
-}
-
-#cv-modal-title {
-    font-size: 26px;
-    font-weight: 700;
-    margin-bottom: 30px;
-}
-
-
-/* Download Buttons */
-.cv-btn {
-    padding: 10px 30px;
-    text-decoration: none;
-    > span {
-        width: 20px !important;
-        height: 20px !important;
-        -webkit-mask-image: url("assets/img/file-pdf-duotone-svgrepo-com.svg") !important;
-        mask-image: url("assets/img/file-pdf-duotone-svgrepo-com.svg") !important;
-        transform: none !important;
-    }
-} 
-/*#endregion */
