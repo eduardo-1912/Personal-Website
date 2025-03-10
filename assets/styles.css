@@ -248,7 +248,7 @@ body {
 }
 
 #sidebar-title {
-    opacity: 0.7;
+    opacity: 0.6;
     padding-left: 10px;
     font-family: 'DM Mono', monospace;
     margin-bottom: 14px;
@@ -310,7 +310,7 @@ body {
     > span:first-child {
         -webkit-mask-image: url("img/linkedin-icon.svg");
         mask-image: url("img/linkedin-icon.svg");
-        background-color: rgb(255, 255, 255);
+
     }
 }
 
@@ -318,7 +318,7 @@ body {
     > span:first-child {
         -webkit-mask-image: url("img/github-icon.svg");
         mask-image: url("img/github-icon.svg");
-        background-color: rgb(255, 255, 255);
+
     }
 }
 
@@ -326,7 +326,7 @@ body {
     > span:first-child {
         -webkit-mask-image: url("img/envelope-icon.svg");
         mask-image: url("img/envelope-icon.svg");
-        background-color: rgb(255, 255, 255);
+
     }
 }
 
@@ -745,12 +745,12 @@ body {
     overflow: hidden;
 }
 
-#skills-btn {
+#skills-link {
     display: flex;
     align-items: center;
     align-content: center;
     justify-content: center;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.15s ease-in-out;
     text-decoration: none;
 
     > span {
@@ -767,16 +767,15 @@ body {
         -webkit-mask-image: url("img/check-square-icon.svg");
         mask-image: url("img/check-square-icon.svg");
         margin-left: 6px;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.15s ease-in-out;
     }
 }
 
-#skills-btn:hover {
+#skills-link:hover {
     opacity: 0.9;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
 }
 
-#skills-btn:active {
+#skills-link:active {
     opacity: 1;
 }
 
@@ -1116,17 +1115,28 @@ body {
 }
 
 #verify-link:hover {
-    opacity: 1;
+    opacity: 0.9;
+    p {
+        opacity: 0.9;
+    }
+    span {
+        opacity: 0.9;
+    }
 
+}
+
+#verify-link:active {
+    opacity: 1;
     p {
         opacity: 1;
     }
-
     span {
         opacity: 1;
     }
 
 }
+
+
 
 .inner-container-certificates {
     margin-inline: auto;
@@ -1368,10 +1378,7 @@ body {
 }
 
 
-.container-projects {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    position: relative;
-}
+
 
 .container-projects::before {
     content: "";
@@ -1389,15 +1396,166 @@ body {
     pointer-events: none;
 }
 
-.inner-container-projects {
-    margin-inline: auto;
-    max-width: 70rem;
-    padding: 100px 56px;
-    border-inline: 1px dashed rgba(255, 255, 255, 0.1);
+.container-projects {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     position: relative;
-    z-index: 1;
-    background-color: rgb(18, 18, 18);
+
+    .inner-container-projects {
+        margin-inline: auto;
+        max-width: 70rem;
+        padding: 100px 56px;
+        border-inline: 1px dashed rgba(255, 255, 255, 0.1);
+        position: relative;
+        z-index: 1;
+        background-color: rgb(18, 18, 18);
+
+
+        #see-all-link {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: all 0.15s ease-in-out;
+            p {
+                opacity: 0.6;
+                transition: all 0.15s ease-in-out;
+            }
+            span {
+                display: inline-flex;
+                width: 20px;
+                height: 20px;
+                margin-left: 4px;
+                background-size: 100% 100%;
+                object-fit: scale-down;
+                background-color: rgb(255, 255, 255);
+                -webkit-mask-size: contain;
+                -webkit-mask-repeat: no-repeat;
+                mask-size: contain;
+                mask-repeat: no-repeat;
+                -webkit-mask-image: url("img/arrow-up-right-icon.svg");
+                mask-image: url("img/arrow-up-right-icon.svg");
+                opacity: 0.6;
+                transition: all 0.15s ease-in-out;
+            }
+        }
+        
+        #see-all-link:hover {
+            opacity: 0.9;
+            p {
+                opacity: 0.9;
+            }
+            span {
+                opacity: 0.9;
+            }
+        
+        }
+        
+        #see-all-link:active {
+            opacity: 1;
+            p {
+                opacity: 1;
+            }
+            span {
+                opacity: 1;
+            }
+        
+        }
+
+        .project-col {
+            padding: 12px;
+        }
+        
+        .project-card {
+            border-radius: 14px;
+            overflow: hidden;
+            text-decoration: none;
+            border: 1px solid rgb(35, 35, 35);
+            img {
+                object-fit: cover;
+                aspect-ratio: 2 / 1;
+                border-radius: 12px 12px 0px 0px;
+                overflow: hidden;
+                transition: all 0.25s ease-in-out; 
+            }
+            transition: all 0.25s ease-in-out;
+        }
+        
+        .project-card-body {
+            background-color: rgb(25,25,25);
+            z-index: 10000;
+            overflow: hidden;
+            gap: 16px;
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .project-card-title {
+            font-size: 15px;
+            font-weight: 600;
+            opacity: 0.9;
+            transition: all 0.25s ease-in-out;
+        }
+        
+        .project-card-information {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            opacity: 0.6;
+            transition: all 0.25s ease-in-out;
+        
+            #project-date {
+                display: flex;
+                align-items: center;
+        
+                span {
+                    display: inline-flex;
+                    width: 19px;
+                    height: 19px;
+                    right: 0;
+                    background-size: 100% 100%;
+                    object-fit: scale-down;
+                    background-color: rgb(255, 255, 255);
+                    -webkit-mask-size: contain;
+                    -webkit-mask-repeat: no-repeat;
+                    mask-size: contain;
+                    mask-repeat: no-repeat;
+                    -webkit-mask-image: url("img/calendar-icon.svg");
+                    mask-image: url("img/calendar-icon.svg");
+                    opacity: 0.6;
+                    transition: all 0.25s ease-in-out;
+                    transform: translateX(-3px) scale(0.85);
+                }
+            }
+        
+        }
+        
+        #project-link-icon {
+            display: flex;
+            width: 25px;
+            height: 25px;
+            right: 0;
+            background-size: 100% 100%;
+            object-fit: scale-down;
+            background-color: rgb(255, 255, 255);
+            -webkit-mask-size: contain;
+            -webkit-mask-repeat: no-repeat;
+            mask-size: contain;
+            mask-repeat: no-repeat;
+            margin-right: 0px;
+            -webkit-mask-image: url("img/link-icon.svg");
+            mask-image: url("img/link-icon.svg");
+            opacity: 0.6;
+            transition: all 0.25s ease-in-out;
+            transform: scale(0.85);
+        }
+
+
+    }
+
 }
+
+
 
 
 
@@ -1727,7 +1885,7 @@ footer {
         padding-top: 74px;
     }
 
-    .container-home, .container-contact {
+    .container-home, .inner-container-projects, .container-contact {
         padding: 36px 24px;
         border-inline: 1px dashed transparent;
     }

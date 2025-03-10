@@ -176,7 +176,7 @@
 
                 <div class="d-flex justify-content-between" style="margin-bottom: 32px;">
                     <p class="mono-text" data-en="ABOUT-ME" data-pt="SOBRE-MIM"></p>
-                    <a id="skills-btn" class="text-white mono-text" href="#projects">SKILLS<span></span></a>
+                    <a id="skills-link" class="text-white mono-text" href="#projects">SKILLS<span></span></a>
                 </div>
 
                 <h1 class="noselect"><span id="home-title" data-en="Hello, I'm " data-pt="Olá, sou o "></span><span id="home-name" class="ms-1">Eduardo</span></h1>
@@ -186,13 +186,12 @@
                     <p class="about-text mb-3">Before NexusLab, I spent a few years at BrightPath, crafting intuitive designs for cutting-edge apps. I’ve also worked with Flux Studios, PixelForge, and Orbital Designs, focusing on branding and UX.</p>
                     <div class="d-flex align-items-center">
                         <a id="contact-btn" class="my-3" href="#contact"><span></span><p class="fs-15" data-en="Contact me" data-pt="Contactar"></p></a>
-                        <p class="ms-3 mono-text"></p>
                     </div>
                 </div>
 
                 <!-- WORK EXPERIENCE -->
                 <div class="my-4">
-                    <p class="mb-2 ms-1 fs-15 mono opacity-60" data-en="WORK EXPERIENCE" data-pt="EXPERIÊNCIA PROFISSIONAL"></p>
+                    <p class="mb-2 ms-1 fs-15 mono opacity-60" data-en="WORK EXPERIENCE -.-." data-pt="EXPERIÊNCIA PROFISSIONAL -.-."></p>
                     <div class="experience">
                         <div class="experience-item">
                             <div class="experience-header" data-bs-toggle="collapse" data-bs-target="#work1" aria-expande="false">
@@ -243,7 +242,7 @@
 
                 <!-- EDUCATION -->
                 <div class="mt-4">
-                    <p class="mb-2 ms-1 mono fs-15 opacity-60" data-en="EDUCATION" data-pt="EDUCAÇÃO"></p>
+                    <p class="mb-2 ms-1 mono fs-15 opacity-60" data-en="EDUCATION -.-." data-pt="EDUCAÇÃO -.-."></p>
                     <div class="experience">
                         <div class="experience-item">
                             <div class="experience-header" data-bs-toggle="collapse" data-bs-target="#education1" aria-expande="false">
@@ -474,136 +473,35 @@
                 <div class="inner-container-projects">
                     <div class="d-flex justify-content-between mx-3" style="margin-bottom: 32px;">
                         <p class="mono-text" data-en="PROJECTS" data-pt="PROJETOS"></p>
-                        <a class="text-white text-decoration-none" href="https://github.com/eduardo-dcs" target="_blank"><p class="mono-text" data-en="SEE ALL" data-pt="VER TODOS"></p><span></span></a>
+                        <a id="see-all-link" href="https://github.com/eduardo-dcs" target="_blank"><p class="mono-text" data-en="SEE ALL" data-pt="VER TODOS"></p><span></span></a>
                     </div>
 
                     <div class="project-row d-flex justify-content-center row row-cols-1 row-cols-sm-2 row-cols-xxl-3 mx-auto">
-                        <div class="col certificate-col">
-                            <a class="card certificate-card h-100" href="#" target="_blank">
-                                <img class="card-img-top" src="assets/certificates/comptia-security-plus.jpg">
-                                <div class="card-body certificate-card-body">
+                        <div class="col project-col">
+                            <a class="card project-card h-100" href="#" target="_blank">
+                                <img class="card-img-top" src="assets/img/placeholder.jpg">
+                                <div class="card-body project-card-body">
                                     <div class="d-flex flex-column gap-1">
                                         <div>
-                                            <p class="certificate-card-title">Security+</p>
+                                            <p class="project-card-title">NMAP Port Scanner</p>
                                         </div>
+
+                                        <div class="project-card-information">
+                                            <p id="project-date"><span></span>07/2025</p>
+                                        </div>
+
                                         <div>
-                                            <div class="certificate-card-information">
-                                                <p id="certificate-issuer"><span></span>CompTIA</p>
-                                                <p id="certificate-date"><span></span>07/2025</p>
-                                            </div>
+                                            <p>Developed an AI Customer Support Chatbot which automatically responds to customer support tickets using the latest GPT models.</p>
                                         </div>
+
                                     </div>
                                     <div>
-                                        <span id="certificate-link-icon"></span>
+                                        <a href="#" target="_blank"><p data-en="See on GitHub"></p><span id="project-link-icon"></span></a>
                                     </div>
                                 </div>
                             </a>
                         </div>
-                        <div class="col certificate-col">
-                            <a class="card certificate-card h-100" href="#" target="_blank">
-                                <img class="card-img-top" src="assets/certificates/aws-cloud-practicioner.jpg">
-                                <div class="card-body certificate-card-body">
-                                    <div class="d-flex flex-column gap-1">
-                                        <div>
-                                            <p class="certificate-card-title">Certified Cloud Practicioner</p>
-                                        </div>
-                                        <div>
-                                            <div class="certificate-card-information">
-                                                <p id="certificate-issuer"><span></span>AWS</p>
-                                                <p id="certificate-date"><span></span>09/2025</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <span id="certificate-link-icon"></span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col certificate-col">
-                            <a class="card certificate-card h-100" href="#" target="_blank">
-                                <img class="card-img-top" src="assets/certificates/google-cybersecurity.jpg">
-                                <div class="card-body certificate-card-body">
-                                    <div class="d-flex flex-column gap-1">
-                                        <div>
-                                            <p class="certificate-card-title">Cybersecurity Professional</p>
-                                        </div>
-                                        <div>
-                                            <div class="certificate-card-information">
-                                                <p id="certificate-issuer"><span></span>Google</p>
-                                                <p id="certificate-date"><span></span>05/2025</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <span id="certificate-link-icon"></span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col certificate-col">
-                            <a class="card certificate-card h-100" href="#" target="_blank">
-                                <img class="card-img-top" src="assets/certificates/comptia-security-plus.jpg">
-                                <div class="card-body certificate-card-body">
-                                    <div class="d-flex flex-column gap-1">
-                                        <div>
-                                            <p class="certificate-card-title">Security+</p>
-                                        </div>
-                                        <div>
-                                            <div class="certificate-card-information">
-                                                <p id="certificate-issuer"><span></span>CompTIA</p>
-                                                <p id="certificate-date"><span></span>06/2024</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <span id="certificate-link-icon"></span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col certificate-col">
-                            <a class="card certificate-card h-100" href="#" target="_blank">
-                                <img class="card-img-top" src="assets/certificates/comptia-security-plus.jpg">
-                                <div class="card-body certificate-card-body">
-                                    <div class="d-flex flex-column gap-1">
-                                        <div>
-                                            <p class="certificate-card-title">Security+</p>
-                                        </div>
-                                        <div>
-                                            <div class="certificate-card-information">
-                                                <p id="certificate-issuer"><span></span>CompTIA</p>
-                                                <p id="certificate-date"><span></span>06/2024</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <span id="certificate-link-icon"></span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col certificate-col">
-                            <a class="card certificate-card h-100" href="#" target="_blank">
-                                <img class="card-img-top" src="assets/certificates/comptia-security-plus.jpg">
-                                <div class="card-body certificate-card-body">
-                                    <div class="d-flex flex-column gap-1">
-                                        <div>
-                                            <p class="certificate-card-title">Security+</p>
-                                        </div>
-                                        <div>
-                                            <div class="certificate-card-information">
-                                                <p id="certificate-issuer"><span></span>CompTIA</p>
-                                                <p id="certificate-date"><span></span>06/2024</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <span id="certificate-link-icon"></span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+
                     </div>
 
 
@@ -648,7 +546,7 @@
                     </div>
 
                     <div>
-                        <p></p>
+                        <p class="mt-3 mb-2 ms-1 fs-15 mono opacity-60" data-en="CONTACTS -.-." data-pt="CONTACTOS -.-."></p>
 
                         <!-- EMAIL -->
                         <div class="contact-header">
