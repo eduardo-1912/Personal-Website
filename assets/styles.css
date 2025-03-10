@@ -515,9 +515,10 @@ body {
 /* #region NAVBAR */
 .navbar {
     padding: 14px 20px;
-    background-color: rgba(15, 15, 15, 0.8) !important;
+    background-color: rgba(15, 15, 15, 0.95) !important;
     backdrop-filter: blur(30px);
-    box-shadow: 0 0 40px rgba(15, 15, 15, 0.9);
+    box-shadow: 0px 10px 20px 0px rgba(18,18,18,1);
+    border-bottom: 1px solid rgb(35, 35, 35)
 }
 
 
@@ -644,7 +645,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: rgb(25, 25, 25);
+    background-color: rgb(25, 25, 25, 0.7);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 10px;
     box-shadow: rgba(255, 255, 255, 0.07) 0px 0.557334px 1.672px -1.125px inset, rgba(255, 255, 255, 0.063) 0px 1.69015px 5.07046px -2.25px inset, rgba(255, 255, 255, 0.05) 0px 4.46786px 13.4036px -3.375px inset, rgba(255, 255, 255, 0.008) 0px 14px 42px -4.5px inset;
@@ -721,7 +722,7 @@ body {
 
 .container-home {
     margin-inline: auto;
-    max-width: 57rem;
+    max-width: 55rem;
     padding: 72px 48px;
     border-inline: 1px dashed rgba(255, 255, 255, 0.1);
     position: relative; /* Needed for absolute positioning inside */
@@ -780,7 +781,8 @@ body {
 }
 
 #home-title {
-    font-weight: 750;
+    font-weight: 650;
+    opacity: 0.95;
     font-size: 34px;
     margin-bottom: 20px;
     background: rgb(255,255,255);
@@ -824,7 +826,7 @@ body {
     align-items: center;
     justify-content: center;
     color: rgba(255, 255, 255, 0.8);
-    transition: all 0.2s ease-in-out;
+    transition: all 0.15s ease-in-out;
     > span {
         display: inline-block;
         width: 18px;
@@ -875,7 +877,7 @@ body {
     align-items: center;
     cursor: pointer;
     padding: 12px 6px;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.12s ease-in-out;
 }
 
 .experience-header:hover {
@@ -891,7 +893,7 @@ body {
         }
 
         > img {
-            box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
         }
     }
 
@@ -917,7 +919,7 @@ body {
     .experience-left {
 
         > img {
-            box-shadow: 0 0 25px rgba(255, 255, 255, 0.35);
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
         }
     }
     .experience-divider {
@@ -939,14 +941,14 @@ body {
     gap: 10px;
     font-size: 15px;
     white-space: nowrap;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.15s ease-in-out;
 
     > span {
-        transition: all 0.2s ease-in-out;
+        transition: all 0.15s ease-in-out;
     }
 
     > img {
-        transition: all 0.2s ease-in-out;
+        transition: all 0.15s ease-in-out;
     }
 
 }
@@ -964,18 +966,18 @@ body {
     gap: 12px;
     font-size: 15px;
     white-space: nowrap; /* Ensures text stays on one line */
-    transition: all 0.2s ease-in-out;
+    transition: all 0.15s ease-in-out;
 
     > span:nth-child(1) {
         color: rgba(255, 255, 255, 0.8);
-        transition: all 0.2s ease-in-out;
+        transition: all 0.15s ease-in-out;
     }
 
     > span:nth-child(2) {
         font-size: 13px;
         font-weight: 650;
         color: rgba(255, 255, 255, 0.5);
-        transition: all 0.2s ease-in-out;
+        transition: all 0.15s ease-in-out;
     }
 
     
@@ -986,7 +988,7 @@ body {
     flex-grow: 1;
     border: 0.05rem dashed rgba(255, 255, 255, 0.12);
     margin: 0 16px; /* Ensures spacing between elements */
-    transition: all 0.2s ease-in-out;
+    transition: all 0.15s ease-in-out;
 }
 
 .experience-description ul {
@@ -1082,9 +1084,53 @@ body {
     pointer-events: none;
 }
 
+#verify-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: all 0.15s ease-in-out;
+
+    p {
+        opacity: 0.6;
+        transition: all 0.15s ease-in-out;
+    }
+
+    span {
+        display: inline-flex;
+        width: 17px;
+        height: 17px;
+        margin-left: 4px;
+        background-size: 100% 100%;
+        object-fit: scale-down;
+        background-color: rgb(255, 255, 255);
+        -webkit-mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        -webkit-mask-image: url("img/checked-circle-wavy-icon.svg");
+        mask-image: url("img/checked-circle-wavy-icon.svg");
+        opacity: 0.6;
+        transition: all 0.15s ease-in-out;
+        transform: translateY(-1px);
+    }
+}
+
+#verify-link:hover {
+    opacity: 1;
+
+    p {
+        opacity: 1;
+    }
+
+    span {
+        opacity: 1;
+    }
+
+}
+
 .inner-container-certificates {
     margin-inline: auto;
-    max-width: 115rem;
+    max-width: 105rem;
 }
 
 .certificate-col {
@@ -1236,16 +1282,14 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.12);
     text-decoration: none;
     border-radius: 10px;
-    box-shadow: rgba(255, 255, 255, 0.18) 0px 0.602187px 1.08394px -0.916667px inset, rgba(255, 255, 255, 0.18) 0px 2.28853px 4.11936px -1.83333px inset, rgba(255, 255, 255, 0.17) 0px 10px 18px -2.75px inset, rgba(255, 255, 255, 0.022) 0px 0px 20px 1px;
+    box-shadow: rgba(255, 255, 255, 0.243) 0px 0.602187px 1.08394px -0.916667px inset, rgba(255, 255, 255, 0.235) 0px 2.28853px 4.11936px -1.83333px inset, rgba(255, 255, 255, 0.204) 0px 10px 18px -2.75px inset, rgba(255, 255, 255, 0.03) 0px 0px 20px 1px;
     padding: 9px 20px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     color: rgba(255, 255, 255, 0.8);
-    transition: all 0.2s ease-in-out;
+    transition: all 0.15s ease-in-out;
     width: 145px;
-
-
     span {
         display: inline-block;
         width: 16px;
@@ -1283,10 +1327,10 @@ body {
     }
 }
 
+
 #show-more-btn {
     display: flex;
     align-items: center;
-    transition: opacity 0.3s ease-in-out;
 }
 
 /* Ambos os textos começam visíveis, mas apenas um aparece por vez */
@@ -1576,7 +1620,7 @@ footer {
             font-size: clamp(30px, calc(2rem + 11vw), 170px);
             padding: 10px 10px 20px;
             background: rgb(255,255,255);
-            background: linear-gradient(-180deg, rgba(255, 255, 255, 0.23) 0%, rgba(255, 255, 255, 0.04) 55%, rgba(255, 255, 255, 0) 70%);
+            background: linear-gradient(-180deg, rgba(255, 255, 255, 0.23) 0%, rgba(255, 255, 255, 0.03) 55%, rgba(255, 255, 255, 0) 70%);
             background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: 700;
@@ -1639,7 +1683,7 @@ footer {
 
     #footer-name {
         padding-block: 30px 30px !important;
-        background: linear-gradient(-180deg, rgba(255, 255, 255, 0.23) 0%, rgba(255, 255, 255, 0.05) 55%, rgba(255, 255, 255, 0) 80%) !important;
+        background: linear-gradient(-180deg, rgba(255, 255, 255, 0.23) 0%, rgba(255, 255, 255, 0.04) 55%, rgba(255, 255, 255, 0) 80%) !important;
         background-clip: text  !important;
         -webkit-text-fill-color: transparent  !important;
     }
