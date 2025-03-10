@@ -119,13 +119,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Update text content dynamically based on language
     function switchLanguage(lang) {
+        document.documentElement.lang = lang; // Update the <html> lang attribute
+    
+        // Update all elements with data-en and data-pt attributes
         document.querySelectorAll("[data-en]").forEach(el => {
             el.textContent = el.getAttribute(`data-${lang}`);
         });
-
+    
         formatDate(lang);
         localStorage.setItem("selectedLanguage", lang);
+    
     }
+    
+    
+    
 
     // Ensure one navigation item is always active
     function setActiveFromHash() {
@@ -198,4 +205,50 @@ document.addEventListener("DOMContentLoaded", function () {
     // Run scroll update on page load and when scrolling
     updateActiveOnScroll();
     window.addEventListener("scroll", updateActiveOnScroll);
+});
+
+
+// CLOSE CV DROPDOWN ON ITEM CLICK
+document.addEventListener("DOMContentLoaded", function () {
+    const cvDropdown = document.getElementById("cv-dropdown");
+    const collapseInstance = new bootstrap.Collapse(cvDropdown, { toggle: false });
+
+    // Fechar o dropdown ao clicar num item
+    document.querySelectorAll(".cv-dropdown-item").forEach(item => {
+        item.addEventListener("click", function () {
+            collapseInstance.hide();
+        });
+    });
+
+    // Fechar o dropdown ao clicar fora dele
+    document.addEventListener("click", function (event) {
+        const button = document.getElementById("btn-download-cv");
+        
+        // Se clicar fora do dropdown e do botão que o ativa, fecha-o
+        if (!cvDropdown.contains(event.target) && !button.contains(event.target)) {
+            collapseInstance.hide();
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const showMoreBtn = document.getElementById("show-more-btn");
+    const collapsedElement = document.getElementById("collapsed-certificates");
+
+    function handleButtonClick() {
+        if (!showMoreBtn) return;
+
+        // Adicionar fade-out ao texto e ícone
+        showMoreBtn.classList.add("button-fade");
+
+        // Trocar o texto a meio da transição
+        setTimeout(() => {
+            showMoreBtn.classList.remove("button-fade"); // Remover fade-out para voltar a aparecer
+        }, 200); // A meio da transição do collapse
+    }
+
+    // Ligar o evento ao botão
+    if (showMoreBtn) {
+        showMoreBtn.addEventListener("click", handleButtonClick);
+    }
 });
