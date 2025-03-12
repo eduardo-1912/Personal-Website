@@ -16,18 +16,10 @@
     background: radial-gradient(circle, rgba(100, 100, 100, 1) 20%, rgba(85, 85, 85, 1) 100%); /*Hover Color */
 }
 
-
 ::selection {
     background: rgba(100, 100, 100, 0.7); /* Mid-gray */
     color: rgb(240, 240, 240); /* Light gray */
     filter: grayscale(100%);
-}
-
-
-* {
-    font-family: "Manrope", sans-serif;
-    font-weight: 500;
-    color: white;
 }
 
 .noselect {
@@ -37,6 +29,12 @@
          -moz-user-select: none;
           -ms-user-select: none;
               user-select: none;
+}
+
+* {
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    color: white;
 }
 
 p {
@@ -1374,7 +1372,7 @@ body {
 }
 
 #show-more-btn[aria-expanded="true"] span {
-    transform: rotate(180deg);
+    transform: rotate(-180deg);
 }
 
 
@@ -1893,12 +1891,16 @@ footer {
     }
 
     .container-home, .inner-container-projects, .container-contact {
-        padding: 36px 24px;
-        border-inline: 1px dashed transparent;
+        padding: 36px 30px !important;
+        border-inline: 1px dashed transparent !important;
     }
 
     #cv-dropdown-card, #cv-items-divider {
         border-style: dashed;
+    }
+
+    .certificate-col, .project-col {
+        padding-inline: 0 !important;
     }
 
 
@@ -1913,7 +1915,7 @@ footer {
 }
 @media (max-width: 1040px) {
     .container-certificates {
-        padding: 48px 24px;
+        padding: 48px 30px;
     }
 }
 /* #endregion */

@@ -231,9 +231,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// SHOW MORE BUTTON
 document.addEventListener("DOMContentLoaded", function () {
     const showMoreBtn = document.getElementById("show-more-btn");
-    const collapsedElement = document.getElementById("collapsed-certificates");
 
     function handleButtonClick() {
         if (!showMoreBtn) return;
