@@ -1810,6 +1810,11 @@ footer {
         font-size: 24px !important;
     }
 }
+@media (max-width: 575px) {
+    .certificate-col, .project-col {
+        padding-inline: 0 !important;
+    }
+}
 @media (min-width: 440px) and (max-width: 592px) {
     .experience-right {
 
@@ -1897,10 +1902,6 @@ footer {
 
     #cv-dropdown-card, #cv-items-divider {
         border-style: dashed;
-    }
-
-    .certificate-col, .project-col {
-        padding-inline: 0 !important;
     }
 
 
